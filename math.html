@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <title>高中數學公式大全</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            bg: '#1a202c',
+                            card: '#2d3748',
+                            text: '#e2e8f0',
+                            muted: '#718096'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #f6f8f9 0%, #e5ebee 100%);
+        }
+
+        .formula-card {
+            transition: all 0.3s ease;
+        }
+
+        .formula-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<script>
+    tailwind.config = {
+        darkMode: 'class',
+    }
+</script>
+<style>
+    body {
+        transition: all 0.3s ease;
+    }
+
+    .formula-card {
+        transition: all 0.3s ease;
+    }
+
+    .formula-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+</style>
+</head>
+
+<body class="min-h-screen flex flex-col bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white">
+    <header class="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-6 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold">🧮 高中數學公式大全</h1>
+            <div class="flex items-center space-x-4">
+                <a href="你的網站網址" target="_blank"
+                    class="bg-white/20 hover:bg-white/30 px-4 py-2 rounded-full transition">
+                    我的網站
+                </a>
+                <button id="dark-mode-toggle" class="bg-white/20 hover:bg-white/30 px-4 py-2 rounded-full transition">
+                    切換模式
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8 flex-grow">
+        <nav class="flex justify-center space-x-4 mb-8">
+            <button class="px-6 py-3 bg-blue-500 text-white rounded-full shadow-md hover:bg-blue-600 transition">
+                代數公式
+            </button>
+            <button class="px-6 py-3 bg-green-500 text-white rounded-full shadow-md hover:bg-green-600 transition">
+                幾何公式
+            </button>
+            <button class="px-6 py-3 bg-purple-500 text-white rounded-full shadow-md hover:bg-purple-600 transition">
+                三角函數
+            </button>
+        </nav>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- 代數公式 -->
+            <div class="formula-card bg-white rounded-2xl shadow-xl p-6 border-l-4 border-blue-500">
+                <h2 class="text-2xl font-bold mb-4 text-blue-700">一次方程式</h2>
+                <div class="bg-gray-100 p-3 rounded-lg mb-4">
+                    \[ ax + b = 0 \]
+                </div>
+                <p class="text-gray-600 mb-4">
+                    求解x的值：當方程式為線性時，可直接移項得到解答
+                </p>
+                <div class="grid grid-cols-3 gap-2">
+                    <input type="number" placeholder="a" class="border p-2 rounded bg-gray-50">
+                    <input type="number" placeholder="b" class="border p-2 rounded bg-gray-50">
+                    <button class="bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
+                        計算
+                    </button>
+                </div>
+            </div>
+
+            <div class="formula-card bg-white rounded-2xl shadow-xl p-6 border-l-4 border-green-500">
+                <h2 class="text-2xl font-bold mb-4 text-green-700">二次方程式</h2>
+                <div class="bg-gray-100 p-3 rounded-lg mb-4">
+                    \[ ax^2 + bx + c = 0 \]
+                </div>
+                <p class="text-gray-600 mb-4">
+                    求根公式：判別式Δ決定解的情況
+                </p>
+                <div class="grid grid-cols-3 gap-2">
+                    <input type="number" placeholder="a" class="border p-2 rounded bg-gray-50">
+                    <input type="number" placeholder="b" class="border p-2 rounded bg-gray-50">
+                    <input type="number" placeholder="c" class="border p-2 rounded bg-gray-50">
+                    <button class="col-span-3 bg-green-500 text-white p-2 rounded hover:bg-green-600">
+                        計算
+                    </button>
+                </div>
+            </div>
+
+            <!-- 幾何公式 -->
+            <div class="formula-card bg-white rounded-2xl shadow-xl p-6 border-l-4 border-purple-500">
+                <h2 class="text-2xl font-bold mb-4 text-purple-700">三角形面積</h2>
+                <div class="bg-gray-100 p-3 rounded-lg mb-4">
+                    \[ A = \frac{1}{2} \times base \times height \]
+                </div>
+                <p class="text-gray-600 mb-4">
+                    利用底邊與高度快速計算三角形面積
+                </p>
+                <div class="grid grid-cols-3 gap-2">
+                    <input type="number" placeholder="底邊" class="border p-2 rounded bg-gray-50">
+                    <input type="number" placeholder="高度" class="border p-2 rounded bg-gray-50">
+                    <button class="bg-purple-500 text-white p-2 rounded hover:bg-purple-600">
+                        計算
+                    </button>
+                </div>
+            </div>
+
+            <!-- 三角函數 -->
+            <div class="formula-card bg-white rounded-2xl shadow-xl p-6 border-l-4 border-red-500">
+                <h2 class="text-2xl font-bold mb-4 text-red-700">正弦餘弦定理</h2>
+                <div class="bg-gray-100 p-3 rounded-lg mb-4">
+                    \[ \sin A = \frac{a}{\sin A} \]
+                    \[ \cos A = \frac{b^2 + c^2 - a^2}{2bc} \]
+                </div>
+                <p class="text-gray-600 mb-4">
+                    解決三角形邊長與角度關係
+                </p>
+                <div class="grid grid-cols-3 gap-2">
+                    <input type="number" placeholder="邊a" class="border p-2 rounded bg-gray-50">
+                    <input type="number" placeholder="邊b" class="border p-2 rounded bg-gray-50">
+                    <input type="number" placeholder="邊c" class="border p-2 rounded bg-gray-50">
+                    <button class="col-span-3 bg-red-500 text-white p-2 rounded hover:bg-red-600">
+                        計算
+                    </button>
+                </div>
+            </div>
+
+            <!-- 統計機率 -->
+            <div class="formula-card bg-white rounded-2xl shadow-xl p-6 border-l-4 border-yellow-500">
+                <h2 class="text-2xl font-bold mb-4 text-yellow-700">期望值</h2>
+                <div class="bg-gray-100 p-3 rounded-lg mb-4">
+                    \[ E(X) = \sum_{i=1}^{n} x_i \times p_i \]
+                </div>
+                <p class="text-gray-600 mb-4">
+                    計算離散型隨機變量的平均值
+                </p>
+                <div class="grid grid-cols-3 gap-2">
+                    <input type="number" placeholder="x1" class="border p-2 rounded bg-gray-50">
+                    <input type="number" placeholder="p1" class="border p-2 rounded bg-gray-50">
+                    <button class="bg-yellow-500 text-white p-2 rounded hover:bg-yellow-600">
+                        計算
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center">
+            © 2024 高中數學公式大全 | 致力於提供清晰易懂的數學工具
+        </div>
+    </footer>
+
+    <script>
+        // 深色模式切換邏輯
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const htmlElement = document.documentElement;
+
+        darkModeToggle.addEventListener('click', () => {
+            htmlElement.classList.toggle('dark');
+            localStorage.setItem('darkMode',
+                htmlElement.classList.contains('dark') ? 'enabled' : 'disabled'
+            );
+        });
+
+        // 頁面載入時檢查之前的模式設定
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            htmlElement.classList.add('dark');
+        }
+        // 在這裡可以添加JavaScript交互邏輯
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        });
+    </script>
+</body>
+
+</html>
